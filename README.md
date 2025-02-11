@@ -63,7 +63,7 @@ No direct correlation between section length and attribution scores, suggesting 
 </table>
 
 #### Next Steps
-![Next Experimental Setup](images/report_2_experimental_setup.png")
+![Next Experimental Setup](images/report_2_experimental_setup.png)
 
 Future work will focus on investigating the relationship between hypothesis generation, ranking, and attribution analysis.
 
