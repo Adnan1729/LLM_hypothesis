@@ -19,7 +19,7 @@ How do LLMs select between multiple hypotheses?
 This study investigates the mechanisms behind LLM-generated scientific hypotheses by analyzing how different sections of research paper abstracts influence the generation process. Using TinyLlama-1.1B-Chat and attribution analysis, we examined the relationship between abstract structure and hypothesis generation.
 
 #### Methodology
-![Experimental Setup](images/experimental_setup.png)
+![Experimental Setup](images/report_1_experimental_setup.png)
 
 The experiment uses Captum Feature Attribution framework to analyze how different sections of scientific abstracts influence the model's hypothesis generation process.
 
