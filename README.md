@@ -25,31 +25,45 @@ The experiment uses Captum Feature Attribution framework to analyze how differen
 
 #### Key Findings
 
-1. **Section Influence Distribution**
-![Relative Importance](images/relative_importance.png)
-- Conclusions demonstrate the highest influence (23.7%)
-- Methods sections follow closely (21.3%)
-- Background sections show significant impact (19.7%)
-- Results and objectives show moderate influence (18.5% and 16.9% respectively)
-
-2. **Correlation Analysis**
-![Attribution Score Correlations](images/correlation_matrix.png)
-- Strong negative correlation (-0.95) between objectives and conclusions
-- Strong positive correlation (0.89) between results and objectives
+<table>
+<tr align="center">
+<td width="25%"><b>Section Influence</b></td>
+<td width="25%"><b>Correlation Analysis</b></td>
+<td width="25%"><b>Length Analysis</b></td>
+<td width="25%"><b>Stability Analysis</b></td>
+</tr>
+<tr align="center">
+<td><img src="images/section_importance.png" alt="Section Importance" width="200"/></td>
+<td><img src="images/correlation_heatmap.png" alt="Correlation Analysis" width="200"/></td>
+<td><img src="images/length_vs_score.png" alt="Length vs Score" width="200"/></td>
+<td><img src="images/stability_metrics.png" alt="Stability Metrics" width="200"/></td>
+</tr>
+<tr>
+<td>
+- Conclusions: 23.7%<br>
+- Methods: 21.3%<br>
+- Background: 19.7%<br>
+- Results: 18.5%<br>
+- Objectives: 16.9%
+</td>
+<td>
+- Strong negative correlation (-0.95) between objectives and conclusions<br>
+- Strong positive correlation (0.89) between results and objectives<br>
 - Moderate negative correlation (-0.51) between background and methods
-
-3. **Section Length Analysis**
-![Section Length vs Attribution](images/section_length_attribution.png)
+</td>
+<td>
 No direct correlation between section length and attribution scores, suggesting content quality and positioning are more critical than length.
-
-4. **Stability Analysis**
-![Stability Metrics](images/stability_metrics.png)
-- Background sections show highest consistency (CV: 0.32)
-- Methods sections display moderate stability (CV: 0.47)
+</td>
+<td>
+- Background sections show highest consistency (CV: 0.32)<br>
+- Methods sections display moderate stability (CV: 0.47)<br>
 - Conclusions show highest variability (CV: 0.95)
+</td>
+</tr>
+</table>
 
 #### Next Steps
-![Next Experimental Setup](images/next_setup.png)
+![Next Experimental Setup](images/report_2_experimental_setup.png")
 
 Future work will focus on investigating the relationship between hypothesis generation, ranking, and attribution analysis.
 
@@ -67,18 +81,3 @@ Future work will focus on investigating the relationship between hypothesis gene
 ├── data/
 └── README.md
 ```
-
-## Citation
-
-```bibtex
-@article{mahmud2025interpreting,
-  title={Interpreting LLM-Generated Scientific Hypotheses: Framework and Initial Findings},
-  author={A. Mahmud, A.A. Rehim, G. Reder},
-  year={2025}
-}
-
-```
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
