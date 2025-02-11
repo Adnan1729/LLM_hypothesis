@@ -59,6 +59,7 @@ Future work will focus on investigating the relationship between hypothesis gene
 .
 ├── reports/
 │   └── report_070225.docx
+│   └── llama_1b_v3_070225.ipynb
 ├── images/
 │   ├── experimental_setup.png
 │   ├── correlation_matrix.png
