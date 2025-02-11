@@ -65,7 +65,6 @@ Future work will focus on investigating the relationship between hypothesis gene
 │   ├── correlation_matrix.png
 │   └── ...
 ├── data/
-├── analysis/
 └── README.md
 ```
 
