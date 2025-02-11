@@ -18,48 +18,40 @@ How do LLMs select between multiple hypotheses?
 
 This study investigates the mechanisms behind LLM-generated scientific hypotheses by analyzing how different sections of research paper abstracts influence the generation process. Using TinyLlama-1.1B-Chat and attribution analysis, we examined the relationship between abstract structure and hypothesis generation.
 
+#### Methodology
+![Experimental Setup](images/experimental_setup.png)
+
+The experiment uses Captum Feature Attribution framework to analyze how different sections of scientific abstracts influence the model's hypothesis generation process.
+
 #### Key Findings
 
-1. **Sectional Influence Distribution**
-   
-   | Section     | Attribution % |
-   |-------------|--------------|
-   | Conclusions | 23.7%        |
-   | Methods     | 21.3%        |
-   | Background  | 19.7%        |
-   | Results     | 18.5%        |
-   | Objectives  | 16.9%        |
+1. **Section Influence Distribution**
+![Relative Importance](images/relative_importance.png)
+- Conclusions demonstrate the highest influence (23.7%)
+- Methods sections follow closely (21.3%)
+- Background sections show significant impact (19.7%)
+- Results and objectives show moderate influence (18.5% and 16.9% respectively)
 
-2. **Consistency Analysis**
-   
-   | Section     | CV    | IQR    |
-   |-------------|-------|--------|
-   | Background  | 0.32  | -      |
-   | Methods     | 0.47  | -      |
-   | Results     | 0.60  | -      |
-   | Objectives  | 0.58  | -      |
-   | Conclusions | 0.95  | 45.45  |
+2. **Correlation Analysis**
+![Attribution Score Correlations](images/correlation_matrix.png)
+- Strong negative correlation (-0.95) between objectives and conclusions
+- Strong positive correlation (0.89) between results and objectives
+- Moderate negative correlation (-0.51) between background and methods
 
-3. **Key Correlations**
-   - Strong negative correlation (-0.95) between objectives and conclusions
-   - Strong positive correlation (0.89) between results and objectives
-   - Moderate negative correlation (-0.51) between background and methods
+3. **Section Length Analysis**
+![Section Length vs Attribution](images/section_length_attribution.png)
+No direct correlation between section length and attribution scores, suggesting content quality and positioning are more critical than length.
 
-#### Methodology
-![Experimental Setup](media/image1.png)
-
-#### Key Insights
-
-1. **Structured Pattern**: LLM hallucination in hypothesis generation follows a structured pattern rather than occurring randomly.
-
-2. **Controlled Hallucination**: The strong negative correlation between objectives and conclusions suggests a form of "controlled hallucination" where the model bridges gaps between research aims and reported findings.
-
-3. **Section Length Impact**: No direct correlation between section length and attribution scores, indicating that content quality and positioning are more critical than length.
+4. **Stability Analysis**
+![Stability Metrics](images/stability_metrics.png)
+- Background sections show highest consistency (CV: 0.32)
+- Methods sections display moderate stability (CV: 0.47)
+- Conclusions show highest variability (CV: 0.95)
 
 #### Next Steps
-Future work will focus on investigating the relationship between hypothesis generation, ranking, and attribution analysis, as outlined in the experimental setup below:
+![Next Experimental Setup](images/next_setup.png)
 
-![Next Experimental Setup](media/image14.png)
+Future work will focus on investigating the relationship between hypothesis generation, ranking, and attribution analysis.
 
 ## Repository Structure
 
@@ -67,19 +59,16 @@ Future work will focus on investigating the relationship between hypothesis gene
 .
 ├── reports/
 │   └── report_070225.docx
-│   └── jupyter_070225.docx
+├── images/
+│   ├── experimental_setup.png
+│   ├── correlation_matrix.png
+│   └── ...
 ├── data/
 ├── analysis/
 └── README.md
 ```
 
-## Contributing
-
-Please read our contributing guidelines before submitting pull requests.
-
 ## Citation
-
-If you use this research in your work, please cite:
 
 ```bibtex
 @article{mahmud2025interpreting,
