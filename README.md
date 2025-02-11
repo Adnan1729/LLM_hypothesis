@@ -73,7 +73,7 @@ Future work will focus on investigating the relationship between hypothesis gene
 ```bibtex
 @article{mahmud2025interpreting,
   title={Interpreting LLM-Generated Scientific Hypotheses: Framework and Initial Findings},
-  author={Adnan Mahmud, Abbi Abdel Rehim, Gabriel Reder},
+  author={A. Mahmud, A.A. Rehim, G. Reder},
   year={2025}
 }
 
